@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Player vs PC</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-container">
-        <header>
-            <h1>Player vs PC</h1>
+      <header>
+        <h1>Player vs PC</h1>
         <h2>Score</h2>
+      </header>
+      <main class="game-container">
+        <h3>PC</h3>
+        <div id="box-pc" class="box-card game-item">
+        </div>
+        <div id="box-result" class="box-result game-item">
+            <h1 id="result"></h1>
+        </div>
+        <div id="box-player" class="box-card game-item"></div>
+        <h3>You</h3>
+        <div class="box-hand-options game-item">
+          <button id="rock-button" type="button" class="game-button">rock</button>
 
-        </header>
-        <main>
-            <div id="pc" class="pc"></div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <button id="paper-button" type="button" class="game-button">paper</button>
 
-        </main>
-        <footer>
-            Lorena de la Luz Mondini &copy;
-        </footer>
-        
+          <button id="scissors-button" type="button" class="game-button">Scissors</button>
+        </div>
+        <div class="box-game-options game-item">
+          <button type="button" class="game-button">Start</button>
+
+          <button type="button" class="game-button">Stop</button>
+        </div>
+      </main>
+      <footer>Lorena de la Luz Mondini &copy;</footer>
     </div>
-</body>
-</html>  
+    <script src="index.js"></script>
+  </body>
+</html>
