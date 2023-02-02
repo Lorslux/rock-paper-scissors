@@ -1,13 +1,17 @@
 const rockButton = document.getElementById("rock-button");
 const paperButton = document.getElementById("paper-button");
 const scissorsButton = document.getElementById("scissors-button");
+const resetButton = document.getElementById("reset-button")
 const cards = ["rock", "paper", "scissors"];
 let pcCard;
 let playerCard;
+let scorePlayer = 0;
+let scorePc = 0;
 
 rockButton.addEventListener("click", handleRockButtonClick);
 paperButton.addEventListener("click", handlePaperButtonClick);
 scissorsButton.addEventListener("click", handleScissorsButtonClick);
+resetButton.addEventListener("click", resetScore);
 
 function clearPlayerCard() {
   const boxPlayer = document.getElementById("box-player");
@@ -77,14 +81,19 @@ function checkResult() {
     (playerCard === "scissors" && pcCard === "paper") ||
     (playerCard === "paper" && pcCard === "rock")
   ) {
+    scorePlayer++;
     setResult("You win!");
+    
   } else {
+    scorePc++;
     setResult("PC wins!");
+    
   }
 }
 
 function setResult(result) {
   document.getElementById("result").innerHTML = result;
+  updateScoreOnScreen();
 }
 
 function clearPlayerSelectedCard(){
@@ -93,3 +102,42 @@ function clearPlayerSelectedCard(){
     document.getElementById("scissors-button").classList.remove("selected");
 }
 
+function updateScoreOnScreen(){
+    document.getElementById("player-score").innerHTML = scorePlayer;
+    document.getElementById("pc-score").innerHTML = scorePc;
+}
+
+function resetScore(){
+    scorePlayer = 0;
+    scorePc = 0;
+    updateScoreOnScreen();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Add score at the begining 
+updateScoreOnScreen();
