@@ -11,31 +11,40 @@
     <div class="main-container">
       <header>
         <h1>Player vs PC</h1>
-        <h2>Score</h2>
+        <div class="status">
+          <div class="status-score">Score :</div>
+          <div class="box-game-options status-actions">
+            <button type="button" class="game-button game-action-button">
+              Start
+            </button>
+
+            <button type="button" class="game-button game-action-button">
+              Stop
+            </button>
+          </div>
+        </div>
       </header>
       <main class="game-container">
-        <h3>PC</h3>
-        <div id="box-pc" class="box-card game-item">
-        </div>
+        <p class="label-player">PC</p>
+        <div id="box-pc" class="box-card game-item"></div>
         <div id="box-result" class="box-result game-item">
-            <h1 id="result"></h1>
+          <h2 id="result">Get Ready!</h2>
         </div>
         <div id="box-player" class="box-card game-item"></div>
-        <h3>You</h3>
+        <p class="label-player">YOU</p>
         <div class="box-hand-options game-item">
-          <button id="rock-button" type="button" class="game-button">rock</button>
+          <button id="rock-button" type="button" class="game-button"></button>
 
-          <button id="paper-button" type="button" class="game-button">paper</button>
+          <button id="paper-button" type="button" class="game-button"></button>
 
-          <button id="scissors-button" type="button" class="game-button">Scissors</button>
-        </div>
-        <div class="box-game-options game-item">
-          <button type="button" class="game-button">Start</button>
-
-          <button type="button" class="game-button">Stop</button>
+          <button
+            id="scissors-button"
+            type="button"
+            class="game-button"
+          ></button>
         </div>
       </main>
-      <footer>Lorena de la Luz Mondini &copy;</footer>
+      <footer>🎀 &copy;Lorena de la Luz Mondini 🎀</footer>
     </div>
     <script src="index.js"></script>
   </body>
