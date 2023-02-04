@@ -1,7 +1,7 @@
 const rockButton = document.getElementById("rock-button");
 const paperButton = document.getElementById("paper-button");
 const scissorsButton = document.getElementById("scissors-button");
-const resetButton = document.getElementById("reset-button")
+const resetButton = document.getElementById("reset-button");
 const cards = ["rock", "paper", "scissors"];
 let pcCard;
 let playerCard;
@@ -11,7 +11,7 @@ let scorePc = 0;
 rockButton.addEventListener("click", handleRockButtonClick);
 paperButton.addEventListener("click", handlePaperButtonClick);
 scissorsButton.addEventListener("click", handleScissorsButtonClick);
-resetButton.addEventListener("click", resetScore);
+resetButton.addEventListener("click", resetGame);
 
 function clearPlayerCard() {
   const boxPlayer = document.getElementById("box-player");
@@ -28,8 +28,8 @@ function clearPcCard() {
 }
 
 function handleRockButtonClick() {
-    clearPlayerSelectedCard();
-   this.classList.add("selected");
+  clearPlayerSelectedCard();
+  this.classList.add("selected");
 
   clearPlayerCard();
   playPcAction();
@@ -39,8 +39,8 @@ function handleRockButtonClick() {
 }
 
 function handlePaperButtonClick() {
-    clearPlayerSelectedCard();
-   this.classList.add("selected");
+  clearPlayerSelectedCard();
+  this.classList.add("selected");
   clearPlayerCard();
   playPcAction();
   document.getElementById("box-player").classList.add("box-card-paper");
@@ -49,8 +49,8 @@ function handlePaperButtonClick() {
 }
 
 function handleScissorsButtonClick() {
-    clearPlayerSelectedCard();
-   this.classList.add("selected");
+  clearPlayerSelectedCard();
+  this.classList.add("selected");
   clearPlayerCard();
   playPcAction();
   document.getElementById("box-player").classList.add("box-card-scissors");
@@ -82,12 +82,10 @@ function checkResult() {
     (playerCard === "paper" && pcCard === "rock")
   ) {
     scorePlayer++;
-    setResult("You win!");
-    
+    setResult("🚩 YOU win! 🚩");
   } else {
     scorePc++;
     setResult("PC wins!");
-    
   }
 }
 
@@ -96,48 +94,27 @@ function setResult(result) {
   updateScoreOnScreen();
 }
 
-function clearPlayerSelectedCard(){
-    document.getElementById("rock-button").classList.remove("selected");
-    document.getElementById("paper-button").classList.remove("selected");
-    document.getElementById("scissors-button").classList.remove("selected");
+function clearPlayerSelectedCard() {
+  document.getElementById("rock-button").classList.remove("selected");
+  document.getElementById("paper-button").classList.remove("selected");
+  document.getElementById("scissors-button").classList.remove("selected");
 }
 
-function updateScoreOnScreen(){
-    document.getElementById("player-score").innerHTML = scorePlayer;
-    document.getElementById("pc-score").innerHTML = scorePc;
+function updateScoreOnScreen() {
+  document.getElementById("player-score").innerHTML = scorePlayer;
+  document.getElementById("pc-score").innerHTML = scorePc;
 }
 
-function resetScore(){
-    scorePlayer = 0;
-    scorePc = 0;
-    updateScoreOnScreen();
+function resetScore() {
+  scorePlayer = 0;
+  scorePc = 0;
+  updateScoreOnScreen();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Add score at the begining 
-updateScoreOnScreen();
+function resetGame() {
+  resetScore();
+  setResult("Get Ready !");
+  clearPlayerSelectedCard();
+  clearPlayerCard();
+  clearPcCard();
+}

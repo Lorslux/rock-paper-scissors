@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Player vs PC</title>
+    <title>PC vs PC</title>
   </head>
   <body>
     <div class="main-container">
       <header>
-        <h1>Player vs PC</h1>
+        <h1>PC vs PC</h1>
         <div class="status">
-          <div class="status-score">YOU: <span id="player-score"></span></div>
-          <div class="status-score">PC: <span id="pc-score"></span></div>
+          
+          <div class="status-score">PC 1: <span id="pc-score"></span></div>
+          <div class="status-score">PC 2: <span id="pc2-score"></span></div>
           <div class="box-game-options status-actions">
+            <button id="play-button" type="button" class="game-action-button">
+              Play
+            </button>
+           
             <button id="reset-button" type="button" class="game-action-button">
               Reset
             </button>
@@ -24,28 +29,18 @@
         </div>
       </header>
       <main class="game-container">
-        <p class="label-player">PC</p>
+        <p class="label-player">PC 1</p>
         <div id="box-pc" class="box-card game-item"></div>
         <div id="box-result" class="box-result game-item">
           <h2 id="result"></h2>
         </div>
-        <div id="box-player" class="box-card game-item"></div>
-        <p class="label-player">YOU</p>
-        <div class="box-hand-options game-item">
-          <button id="rock-button" type="button" class="game-button"></button>
-
-          <button id="paper-button" type="button" class="game-button"></button>
-
-          <button
-            id="scissors-button"
-            type="button"
-            class="game-button"
-          ></button>
-        </div>
+        <div id="box-pc2" class="box-card game-item"></div>
+        <p class="label-player">PC 2</p>
+        
       </main>
       <footer>🎀 &copy;Lorena de la Luz Mondini 🎀</footer>
     </div>
-    <script src="index.js"></script>
+    <script src="pcvspc.js"></script>
     <script>resetGame();</script>
   </body>
 </html>

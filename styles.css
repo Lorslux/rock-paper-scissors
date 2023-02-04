@@ -128,10 +128,15 @@ footer {
 .box-result {
   text-align: center;
   font-size: 40px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-result h2{
     margin: 0;
+    
 }
 
 .box-hand-options {
@@ -227,4 +232,11 @@ footer {
 
 .label-player{
     font-size: 25px;
+}
+
+
+/*---------- PC vs PC ------------*/
+
+#play-button{
+  background-color: #eb455f;
 }
