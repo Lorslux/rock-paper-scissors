@@ -335,3 +335,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
 }
+
+.show-instructions .mask {
+  display: block;
+}
