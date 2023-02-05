@@ -84,6 +84,7 @@ main {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
+  width: 50vw;
 }
 
 footer {
@@ -97,7 +98,7 @@ footer {
   display: block;
   text-decoration: none;
   text-align: center;
-  width: 50vw;
+  width: 100%;
   padding: 20px;
   border: 5px solid #fcffe7;
   background-color: var(--second-color);
@@ -106,6 +107,8 @@ footer {
   color: #fcffe7;
   transition: 0.2s all ease-out;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  font-family: var(--text-font);
+  margin-bottom: 15px;
 }
 
 .button:hover {
@@ -182,7 +185,6 @@ footer {
   margin: 0;
   color: black;
   font-size: larger;
-  
 }
 
 .box-hand-options {
@@ -285,4 +287,51 @@ footer {
 
 #play-button {
   background-color: var(--second-color);
+}
+
+/*---------- instructions ----------------*/
+
+.instructions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #fcffe7;
+  opacity: 0.9;
+  padding: 20px;
+  margin: 10%;
+  border-radius: 20px;
+  border: 5px solid var(--first-color);
+  flex-direction: column;
+  display: none;
+}
+
+.show-instructions .instructions {
+  display: flex;
+}
+
+.instructions-header {
+  font-size: 45px;
+}
+
+.instructions-content {
+  flex-grow: 1;
+  padding: 25px;
+}
+
+.instructions-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+/*---------------- mask -------------*/
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
 }
