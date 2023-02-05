@@ -48,8 +48,7 @@ h1 {
   background-position: center center;
   background-size: contain;
   background-color: var(--first-color);
-  margin-left: 30px;
-  margin-top: 25px;
+  margin: 15px;
 }
 
 #img-title-rock {
