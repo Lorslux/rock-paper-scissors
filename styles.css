@@ -93,6 +93,7 @@ main {
 footer {
   padding: 20px;
   flex-grow: 0;
+  font-size: 20px;
 }
 
 .button {
@@ -113,6 +114,8 @@ footer {
 .button:hover {
   transform: scale(1.2);
 }
+
+
 
 /* -------------- PAGE player vs pc ------------*/
 

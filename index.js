@@ -113,7 +113,7 @@ function resetScore() {
 
 function resetGame() {
   resetScore();
-  setResult("Get Ready !");
+  setResult("Play Your Move!");
   clearPlayerSelectedCard();
   clearPlayerCard();
   clearPcCard();
