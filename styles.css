@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&family=Rye&display=swap");
 
-:root{
+:root {
   --bg-color: #aae3e2;
   --first-color: #3b3486;
   --second-color: #eb455f;
@@ -34,42 +34,38 @@ h1 {
   font-size: 60px;
   color: var(--first-color);
 }
-.box-img-tittle{
+.box-img-tittle {
   display: flex;
   justify-content: center;
-  
 }
 
-.img-title{
+.img-title {
   border-radius: 50%;
   flex-grow: 0;
   width: 150px;
   height: 150px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain; 
+  background-size: contain;
   background-color: var(--first-color);
   margin-left: 30px;
   margin-top: 25px;
 }
 
-
-#img-title-rock{
+#img-title-rock {
   background-image: url(./img/rock-nobg.png);
-
 }
-#img-title-paper{
+#img-title-paper {
   background-image: url(./img/paper-nobg.png);
-
 }
-#img-title-scissors{
+#img-title-scissors {
   background-image: url(./img/scissors-nobg.png);
-
 }
 
-h2{
+h2 {
   padding-top: 30px;
   font-size: 36px;
+  color: var(--first-color);
 }
 
 main {
@@ -94,6 +90,7 @@ footer {
   padding: 20px;
   flex-grow: 0;
   font-size: 20px;
+  color: var(--first-color);
 }
 
 .button {
@@ -114,8 +111,6 @@ footer {
 .button:hover {
   transform: scale(1.2);
 }
-
-
 
 /* -------------- PAGE player vs pc ------------*/
 
@@ -152,7 +147,7 @@ footer {
 }
 
 .box-card {
-  background-color:var(--second-color);
+  background-color: var(--second-color);
   border-radius: 50%;
   flex-grow: 0;
   width: 150px;
@@ -183,9 +178,11 @@ footer {
   align-items: center;
 }
 
-.box-result h2{
-    margin: 0;
-    
+.box-result h2 {
+  margin: 0;
+  color: black;
+  font-size: larger;
+  
 }
 
 .box-hand-options {
@@ -237,11 +234,11 @@ footer {
 }
 
 .game-action-button {
-    display: block;
+  display: block;
   text-decoration: none;
   text-align: center;
   border: 3px solid #fcffe7;
-  background-color:var(--first-color);
+  background-color: var(--first-color);
   border-radius: 45px;
   font-size: 20px;
   color: #fcffe7;
@@ -255,11 +252,9 @@ footer {
   font-family: "Itim", cursive;
 }
 
-.game-action-button:hover{
-    transform: scale(1.2);
+.game-action-button:hover {
+  transform: scale(1.2);
 }
-
-
 
 .status {
   display: flex;
@@ -282,13 +277,12 @@ footer {
   display: flex;
 }
 
-.label-player{
-    font-size: 25px;
+.label-player {
+  font-size: 25px;
 }
-
 
 /*---------- PC vs PC ------------*/
 
-#play-button{
-  background-color:var(--second-color);
+#play-button {
+  background-color: var(--second-color);
 }

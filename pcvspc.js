@@ -61,10 +61,10 @@ function checkResult() {
     (pc2Card === "paper" && pcCard === "rock")
   ) {
     scorePc2++;
-    setResult("PC 2 wins!");
+    setResult("PC 2 <br> WINS!");
   } else {
     scorePc++;
-    setResult("PC 1 wins!");
+    setResult("PC 1 <br> WINS!");
   }
 }
 
