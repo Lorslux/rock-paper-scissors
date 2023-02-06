@@ -2,6 +2,8 @@
 ## Author: Lorena Mondini
 A vanilla JavaScrip project to showcase the "rock, paper, scissors" game. 
 
+Please use a modern browser to play.
+
 ## How to run the game and play
 Download the project and open the index.html file. When you open the game you'll find the game instructions.
 There are two differents options to play the game: 
@@ -36,3 +38,5 @@ I tested with both methods and I found that there wasn't too much of a differenc
 
 ## Futures improvements
 - Responsive for mobile
+- UI Testing 
+- Improve the code to implement more cards

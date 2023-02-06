@@ -30,7 +30,6 @@ function clearPcCard() {
 function handleRockButtonClick() {
   clearPlayerSelectedCard();
   this.classList.add("selected");
-
   clearPlayerCard();
   playPcAction();
   document.getElementById("box-player").classList.add("box-card-rock");
@@ -58,8 +57,6 @@ function handleScissorsButtonClick() {
   checkResult();
 }
 
-
-
 function playPcAction() {
   clearPcCard();
   const randomAction = getRandomChoice();
@@ -81,7 +78,6 @@ function checkResult() {
     setResult("PC wins!");
   }
 }
-
 
 function clearPlayerSelectedCard() {
   document.getElementById("rock-button").classList.remove("selected");

@@ -1,5 +1,4 @@
-
-const playButton = document.getElementById("play-button")
+const playButton = document.getElementById("play-button");
 const resetButton = document.getElementById("reset-button");
 
 let pcCard;
@@ -7,11 +6,9 @@ let pc2Card;
 let scorePc2 = 0;
 let scorePc = 0;
 
-playButton.addEventListener("click",playPcAction);
-playButton.addEventListener("click",playPc2Action);
+playButton.addEventListener("click", playPcAction);
+playButton.addEventListener("click", playPc2Action);
 resetButton.addEventListener("click", resetGame);
-
-
 
 function clearPcCard() {
   const boxPc = document.getElementById("box-pc");
@@ -26,8 +23,6 @@ function clearPc2Card() {
   boxPc.classList.remove("box-card-scissors");
 }
 
-
-
 function playPcAction() {
   clearPcCard();
   const randomAction = getRandomChoice();
@@ -35,7 +30,6 @@ function playPcAction() {
   const boxPc = document.getElementById("box-pc");
   boxPc.classList.add(`box-card-${randomAction}`);
   checkResult();
- 
 }
 
 function playPc2Action() {
@@ -52,9 +46,7 @@ function checkResult() {
     setResult("it's a tie");
     return;
   }
-  if (
-    isPlayer1Winner(pc2Card,pcCard)
-  ) {
+  if (isPlayer1Winner(pc2Card, pcCard)) {
     scorePc2++;
     setResult("PC 2 WINS!");
   } else {
@@ -62,8 +54,6 @@ function checkResult() {
     setResult("PC 1 WINS!");
   }
 }
-
-
 
 function updateScoreOnScreen() {
   document.getElementById("pc2-score").innerHTML = scorePc2;
@@ -82,6 +72,3 @@ function resetGame() {
   clearPcCard();
   clearPc2Card();
 }
-
-
-
