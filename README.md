@@ -8,6 +8,17 @@ There are two differents options to play the game:
 - YOU vs PC : where you can choose your move and the PC will do it as well at the same time in a randomly way.
 - PC vs PC : where you can make to play both PC players at the same time and they will play a move in a rendomly way.
 
+## How to test
+
+I added a unit test using Jest.
+
+Before running the tests please install the dependencies
+```npm install```
+
+to run the test execute ```npm test```
+
+
+
 ## Images
 The hand sings pictures were take it from: 
 https://toppng.com/free-image/rock-paper-scissors-mickey-mouse-hands-PNG-free-PNG-Images_82986

@@ -29,3 +29,5 @@ const cards = ["rock", "paper", "scissors"];
     document.getElementById("result").innerHTML = result;
     updateScoreOnScreen();
   }
+
+  module.exports = isPlayer1Winner;
