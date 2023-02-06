@@ -362,6 +362,18 @@ footer {
 .paper-way{
   background-image: url(./img/paper-nobg.png);
 }
+.box-instruction-button{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img-button-text{
+  padding-left: 10px;
+}
+
+
+
 /*---------------- mask -------------*/
 .mask {
   position: fixed;
