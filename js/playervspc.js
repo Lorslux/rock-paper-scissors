@@ -61,8 +61,23 @@ function handleScissorsButtonClick() {
 }
 
 function getRandomChoice() {
-  return cards[Math.floor(Math.random() * 3)];
+  // return cards[Math.floor(Math.random() * 3)];
+  return cards[uniformRandNumber(cards.length)];
+
 }
+
+
+/* 
+ from: https://pthree.org/2018/06/13/why-the-multiply-and-floor-rng-method-is-biased/
+ */
+function uniformRandNumber(range) {
+  var max = Math.floor(2**32/range) * range; // make "max" a multiple of "range"
+  do {
+      var x = Math.floor(Math.random() * 2**32); // pick a number of [0, 2^32).
+  } while(x >= max); // try again if x is too big
+  return(x % range); // uniformly picked in [0, range)
+}
+
 
 function playPcAction() {
   clearPcCard();
@@ -115,7 +130,7 @@ function resetScore() {
 
 function resetGame() {
   resetScore();
-  setResult("Play Your Move!");
+  setResult("Rock! Paper! Scissors!");
   clearPlayerSelectedCard();
   clearPlayerCard();
   clearPcCard();

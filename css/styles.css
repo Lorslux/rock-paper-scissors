@@ -5,6 +5,7 @@
   --bg-color: #aae3e2;
   --first-color: #3b3486;
   --second-color: #eb455f;
+  --third-color : #fcffe7;
   --title-font: "Rye", cursive;
   --text-font: "Itim", cursive;
 }
@@ -99,11 +100,11 @@ footer {
   text-align: center;
   width: 100%;
   padding: 20px;
-  border: 5px solid #fcffe7;
+  border: 5px solid var(--third-color);
   background-color: var(--second-color);
   border-radius: 45px;
   font-size: 40px;
-  color: #fcffe7;
+  color: var(--third-color);
   transition: 0.2s all ease-out;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   font-family: var(--text-font);
@@ -198,11 +199,11 @@ footer {
   display: block;
   text-decoration: none;
   text-align: center;
-  border: 3px solid #fcffe7;
+  border: 3px solid var(--third-color);
   background-color: var(--second-color);
   border-radius: 45px;
   font-size: 20px;
-  color: #fcffe7;
+  color: var(--third-color);
   transition: 0.2s all ease-out;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
@@ -238,11 +239,11 @@ footer {
   display: block;
   text-decoration: none;
   text-align: center;
-  border: 3px solid #fcffe7;
+  border: 3px solid var(--third-color);
   background-color: var(--first-color);
   border-radius: 45px;
   font-size: 20px;
-  color: #fcffe7;
+  color: var(--third-color);
   transition: 0.2s all ease-out;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   background-repeat: no-repeat;
@@ -296,7 +297,7 @@ footer {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: #fcffe7;
+  background-color:var(--third-color);
   opacity: 0.9;
   padding: 20px;
   margin: 10%;
@@ -312,17 +313,54 @@ footer {
 
 .instructions-header {
   font-size: 45px;
+  text-align: center;
+  font-family: var(--title-font);
+  color: var(--first-color);
 }
 
 .instructions-content {
   flex-grow: 1;
   padding: 25px;
+  font-size: 18px;
+  overflow-y: auto;
+ 
+}
+
+.box-beats{
+  width: 70px;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.img-hand-signs{
+  display: block;
+  margin: 0 auto;
 }
 
 .instructions-footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+}
+
+.winner-ways-box{
+  display: flex;
+  justify-content: center;
+  padding: 10px ;
+  
+}
+
+.rock-way{
+  background-image: url(./img/rock-nobg.png);
+}
+
+.scissors-way{
+  background-image: url(./img/scissors-nobg.png);
+}
+
+.paper-way{
+  background-image: url(./img/paper-nobg.png);
 }
 /*---------------- mask -------------*/
 .mask {
@@ -331,7 +369,7 @@ footer {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-color);
   display: none;
 }
 

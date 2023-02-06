@@ -88,7 +88,7 @@ function resetScore() {
 
 function resetGame() {
   resetScore();
-  setResult("Click on Play!");
+  setResult("Rock! Paper! Scissors!");
   clearPcCard();
   clearPc2Card();
 }
