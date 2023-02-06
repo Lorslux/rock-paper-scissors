@@ -3,7 +3,6 @@ const paperButton = document.getElementById("paper-button");
 const scissorsButton = document.getElementById("scissors-button");
 const resetButton = document.getElementById("reset-button");
 
-const cards = ["rock", "paper", "scissors"];
 let pcCard;
 let playerCard;
 let scorePlayer = 0;
@@ -13,7 +12,6 @@ rockButton.addEventListener("click", handleRockButtonClick);
 paperButton.addEventListener("click", handlePaperButtonClick);
 scissorsButton.addEventListener("click", handleScissorsButtonClick);
 resetButton.addEventListener("click", resetGame);
-
 
 function clearPlayerCard() {
   const boxPlayer = document.getElementById("box-player");
@@ -60,23 +58,6 @@ function handleScissorsButtonClick() {
   checkResult();
 }
 
-function getRandomChoice() {
-  // return cards[Math.floor(Math.random() * 3)];
-  return cards[uniformRandNumber(cards.length)];
-
-}
-
-
-/* 
- from: https://pthree.org/2018/06/13/why-the-multiply-and-floor-rng-method-is-biased/
- */
-function uniformRandNumber(range) {
-  var max = Math.floor(2**32/range) * range; // make "max" a multiple of "range"
-  do {
-      var x = Math.floor(Math.random() * 2**32); // pick a number of [0, 2^32).
-  } while(x >= max); // try again if x is too big
-  return(x % range); // uniformly picked in [0, range)
-}
 
 
 function playPcAction() {
@@ -88,16 +69,11 @@ function playPcAction() {
 }
 
 function checkResult() {
-  console.log("playerCard", playerCard, "pc card", pcCard);
   if (playerCard === pcCard) {
     setResult("it's a tie");
     return;
   }
-  if (
-    (playerCard === "rock" && pcCard === "scissors") ||
-    (playerCard === "scissors" && pcCard === "paper") ||
-    (playerCard === "paper" && pcCard === "rock")
-  ) {
+  if (isPlayer1Winner(playerCard, pcCard)) {
     scorePlayer++;
     setResult("🚩 YOU win! 🚩");
   } else {
@@ -106,10 +82,6 @@ function checkResult() {
   }
 }
 
-function setResult(result) {
-  document.getElementById("result").innerHTML = result;
-  updateScoreOnScreen();
-}
 
 function clearPlayerSelectedCard() {
   document.getElementById("rock-button").classList.remove("selected");
@@ -135,4 +107,3 @@ function resetGame() {
   clearPlayerCard();
   clearPcCard();
 }
-

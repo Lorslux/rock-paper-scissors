@@ -182,7 +182,8 @@ footer {
 }
 
 .box-result h2 {
-  margin: 0;
+  margin: 5px;
+  padding: 0;
   color: black;
   font-size: larger;
 }

@@ -1,6 +1,7 @@
+
 const playButton = document.getElementById("play-button")
 const resetButton = document.getElementById("reset-button");
-const cards = ["rock", "paper", "scissors"];
+
 let pcCard;
 let pc2Card;
 let scorePc2 = 0;
@@ -26,9 +27,6 @@ function clearPc2Card() {
 }
 
 
-function getRandomChoice() {
-  return cards[Math.floor(Math.random() * 3)];
-}
 
 function playPcAction() {
   clearPcCard();
@@ -50,27 +48,19 @@ function playPc2Action() {
 }
 
 function checkResult() {
-  console.log("pc2 card", pc2Card, "pc card", pcCard);
   if (pc2Card === pcCard) {
     setResult("it's a tie");
     return;
   }
   if (
-    (pc2Card === "rock" && pcCard === "scissors") ||
-    (pc2Card === "scissors" && pcCard === "paper") ||
-    (pc2Card === "paper" && pcCard === "rock")
+    isPlayer1Winner(pc2Card,pcCard)
   ) {
     scorePc2++;
-    setResult("PC 2 <br> WINS!");
+    setResult("PC 2 WINS!");
   } else {
     scorePc++;
-    setResult("PC 1 <br> WINS!");
+    setResult("PC 1 WINS!");
   }
-}
-
-function setResult(result) {
-  document.getElementById("result").innerHTML = result;
-  updateScoreOnScreen();
 }
 
 

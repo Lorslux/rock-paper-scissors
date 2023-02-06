@@ -23,3 +23,5 @@ https://pthree.org/2018/06/13/why-the-multiply-and-floor-rng-method-is-biased/
 
 I tested with both methods and I found that there wasn't too much of a difference probably because the range that I use is too small.
 
+## Futures improvements
+- Responsive for mobile
