@@ -5,7 +5,7 @@ A vanilla JavaScrip project to showcase the "rock, paper, scissors" game.
 Please use a modern browser to play.
 
 ## How to run the game and play
-Download the project and open the index.html file. When you open the game you'll find the game instructions.
+Download the project and open the index.html file. When you open the game, in the home page you'll find the game instructions clicking the "how to play" button.
 There are two differents options to play the game: 
 - YOU vs PC : where you can choose your move and the PC will do it as well at the same time in a randomly way.
 - PC vs PC : where you can make to play both PC players at the same time and they will play a move in a rendomly way.
