@@ -10,6 +10,10 @@ There are two differents options to play the game:
 - YOU vs PC : where you can choose your move and the PC will do it as well at the same time in a randomly way.
 - PC vs PC : where you can make to play both PC players at the same time and they will play a move in a rendomly way.
 
+You can also run the game with this link:
+
+https://rock-paper-scissors-henna-three.vercel.app
+
 ## How to test
 
 I added a unit test using Jest.
